@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.iws
+*.ipr
+
+# Fabric 运行时
+run/
+runs/
+
+# 日志
+*.log
+hs_err_*.log
+replay_*.log
+
+# OS
+.DS_Store
+Thumbs.db

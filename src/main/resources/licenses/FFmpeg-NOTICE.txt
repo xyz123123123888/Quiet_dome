@@ -1,0 +1,41 @@
+Third-Party Notice: FFmpeg (via JavaCPP presets)
+================================================
+
+Quiet Dome bundles FFmpeg native binaries through the JavaCPP presets project.
+FFmpeg is used at runtime to decode the bundled .mp4 videos into frames.
+
+Bundled artifacts (see build.gradle)
+------------------------------------
+  org.bytedeco:javacv:1.5.14
+  org.bytedeco:javacpp:1.5.14
+  org.bytedeco:javacpp:1.5.14:windows-x86_64
+  org.bytedeco:ffmpeg:8.1.2-1.5.14
+  org.bytedeco:ffmpeg:8.1.2-1.5.14:windows-x86_64
+
+These are the DEFAULT (non "-gpl") presets. JavaCPP ships the default FFmpeg
+presets under the LGPL, with the "gpl" variants (which pull in GPL-only
+components such as libx264) published separately. This project uses the
+default set, i.e. the LGPL build.
+
+If you need to redistribute this mod, verify the exact license of the
+particular preset build you ship. The authoritative sources are:
+  https://github.com/bytedeco/javacpp-presets
+  https://ffmpeg.org/legal.html
+
+FFmpeg source
+-------------
+FFmpeg source code:            https://ffmpeg.org/download.html
+JavaCPP presets source:        https://github.com/bytedeco/javacpp-presets
+
+LGPL compliance
+---------------
+The LGPL requires that users be able to replace the library. In this mod the
+native binaries live INSIDE the jar as nested jars (META-INF/jars/*.jar).
+To replace them, unpack the mod jar, swap the relevant nested jar, and repack.
+Because the binaries are shipped as separable nested jars and are not statically
+linked into the mod's own code, this satisfies the relinking requirement.
+
+Full license texts
+------------------
+  LGPL-3.0.txt  — GNU Lesser General Public License v3
+  GPL-3.0.txt   — GNU General Public License v3 (referenced by the LGPL)

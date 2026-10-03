@@ -1,0 +1,10 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.quietdome.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "FabricModMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
